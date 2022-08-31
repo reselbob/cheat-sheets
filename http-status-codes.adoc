@@ -3,16 +3,18 @@
 :product-name:
 :version: 1.0.0
 
-Status codes are the fundamental means for determining whether an HTTP request has succeeded or not. Status code are defined according to a standard specified in https://datatracker.ietf.org/doc/html/rfc7231#section-6[RFC7231].
+Status codes are the fundamental means for determining whether an HTTP request has succeeded or not. Status code are defined according to a variety of specification standards.
 
-The following cheat sheet describes the HTTP Status codes defined in the specification in a concise manner. Each code listing links to a more detailed description within the RFC7231 specification.
+The following cheat sheet describes the HTTP Status codes defined in the specification in a concise manner. Each code listing links to a more detailed description within the relevant specification.
 
 ## Informational response codes (100–199)
 
 Informational response codes indicate that an HTTP request has been received by the web server but that the request is still being processed. Typically, the web server will send another status code was the request processing has been completed.
 
 * 100 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.1[Continue]
-* 101 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.2[Switching Protocols] 
+* 101 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.2[Switching Protocols]
+* 102 - Processing
+* 103 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/103[Early Hints]
 
 ## Successful response codes (200–299)
 
@@ -25,6 +27,9 @@ Success response codes describe one of a variety of success actions taken by the
 * 204 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.5[No Content] 
 * 205 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.6[Reset Content]
 * 206 - https://datatracker.ietf.org/doc/html/rfc7233#section-4.1[Partial Content]
+* 207 - Multi-Status
+* 208 - Already Reported
+* 226 - IM Used
 
 
 ## Redirection response codes (300–399)
@@ -38,6 +43,7 @@ Redirection response codes are generated when the HTTP request instigated by a c
 * 304 - https://datatracker.ietf.org/doc/html/rfc7232#section-4.1[Not Modified]
 * 305 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.5[Use Proxy]
 * 307 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.7[Temporary Redirect]
+* 308 - https://httpwg.org/specs/rfc7538.html#status.308[Permanent Redirect]
 
 ## Client submission error response codes  (400–499)
 
@@ -60,8 +66,18 @@ Client submission error response codes are generated when there is something wro
 * 414 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.12[URI Too Long]
 * 415 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.13[Unsupported Media Type]
 * 416 - https://datatracker.ietf.org/doc/html/rfc7233#section-4.4[Range Not Satisfiable]
+* 418 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418[I'm a teapot]
 * 417 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.14[Expectation Failed]
-* 426 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.15[Upgrade Required]  
+* 421 - Misdirected request
+* 422 - https://httpwg.org/specs/rfc9110.html#status.422[Unprocessable Entity]
+* 423 - Locked
+* 424 - Failed Dependency
+* 425 - https://httpwg.org/specs/rfc8470.html#status[Too Early]
+* 426 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.15[Upgrade Required]
+* 428 - https://www.rfc-editor.org/rfc/rfc6585#section-3[Precondition Required]
+* 429 - https://www.rfc-editor.org/rfc/rfc6585#section-4[Too Many Requests]
+* 431 - https://www.rfc-editor.org/rfc/rfc6585#section-5[Request Header Fields Too Large]
+* 451 - https://httpwg.org/specs/rfc7725.html#n-451-unavailable-for-legal-reasons[Unavailable For Legal Reasons]
 
 ## Server-side error response codes  (500–599)
 Server side error response codes are generated when something goes wrong on the web server accepting the request.
@@ -72,3 +88,8 @@ Server side error response codes are generated when something goes wrong on the 
 * 503 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.4[Service Unavailable]
 * 504 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.5[Gateway Timeout]
 * 505 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.6[HTTP Version Not Supported]
+* 506 - https://www.rfc-editor.org/rfc/rfc2295#section-8.1[Variant Also Negotiates]
+* 507 - https://www.rfc-editor.org/rfc/rfc4918#section-11.5[Insufficient Storage]
+* 508 - https://www.rfc-editor.org/rfc/rfc5842#section-7.2[Loop Detected]
+* 510 - https://www.rfc-editor.org/rfc/rfc2774#section-7[Not Extended]
+* 511 - https://www.rfc-editor.org/rfc/rfc6585#section-6[Network Authentication Required]
