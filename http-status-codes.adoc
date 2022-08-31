@@ -1,0 +1,74 @@
+= HTTP Status Codes Cheat Sheet
+:experimental: true
+:product-name:
+:version: 1.0.0
+
+Status codes are the fundamental means for determining whether an HTTP request has succeeded or not. Status code are defined according to a standard specified in https://datatracker.ietf.org/doc/html/rfc7231#section-6[RFC7231].
+
+The following cheat sheet describes the HTTP Status codes defined in the specification in a concise manner. Each code listing links to a more detailed description within the RFC7231 specification.
+
+## Informational response codes (100–199)
+
+Informational response codes indicate that an HTTP request has been received by the web server but that the request is still being processed. Typically, the web server will send another status code was the request processing has been completed.
+
+* 100 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.1[Continue]
+* 101 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.2.2[Switching Protocols] 
+
+## Successful response codes (200–299)
+
+Success response codes describe one of a variety of success actions taken by the web server.
+
+* 200 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.1[OK]
+* 201 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.2[Created]
+* 202 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.3[Accepted]  
+* 203 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.4[Non-Authoritative Information]
+* 204 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.5[No Content] 
+* 205 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.6[Reset Content]
+* 206 - https://datatracker.ietf.org/doc/html/rfc7233#section-4.1[Partial Content]
+
+
+## Redirection response codes (300–399)
+
+Redirection response codes are generated when the HTTP request instigated by a client – browser based or command line – is sent to another URL rather than the original target URL.
+
+* 300 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.1[Multiple Choices]
+* 301 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.2[Moved Permanently]
+* 302 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.3[Found]
+* 303 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.4[See Other]
+* 304 - https://datatracker.ietf.org/doc/html/rfc7232#section-4.1[Not Modified]
+* 305 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.5[Use Proxy]
+* 307 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.4.7[Temporary Redirect]
+
+## Client submission error response codes  (400–499)
+
+Client submission error response codes are generated when there is something wrong with the request being submitted by client calling the web server
+
+* 400 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1[Bad Request]
+* 401 - https://datatracker.ietf.org/doc/html/rfc7235#section-3.1[Unauthorized] 
+* 402 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.2[Payment Required]
+* 403 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.3[Forbidden]
+* 404 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.4[Not Found]  
+* 405 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.5[Method Not Allowed]
+* 406 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.6[Not Acceptable]
+* 407 - https://datatracker.ietf.org/doc/html/rfc7235#section-3.2[Proxy Authentication Required]
+* 408 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.7[Request Timeout] 
+* 409 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.8[Conflict]
+* 410 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.9[Gone] 
+* 411 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.10[Length Required]
+* 412 - https://datatracker.ietf.org/doc/html/rfc7232#section-4.2[Precondition Failed]
+* 413 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.11[Payload Too Large]
+* 414 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.12[URI Too Long]
+* 415 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.13[Unsupported Media Type]
+* 416 - https://datatracker.ietf.org/doc/html/rfc7233#section-4.4[Range Not Satisfiable]
+* 417 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.14[Expectation Failed]
+* 426 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.15[Upgrade Required]  
+
+## Server-side error response codes  (500–599)
+Server side error response codes are generated when something goes wrong on the web server accepting the request.
+
+* 500 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1[Internal Server Error]
+* 501 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.2[Not Implemented]
+* 502 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.3[Bad Gateway]
+* 503 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.4[Service Unavailable]
+* 504 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.5[Gateway Timeout]
+* 505 - https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.6[HTTP Version Not Supported]
